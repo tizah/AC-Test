@@ -1,0 +1,232 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica-w01-bold,
+        helvetica-w02-bold,
+        helvetica-lt-w10-bold,
+        sans-serif;
+    ;
+}
+
+@media only screen and (max-width: 600px) {
+    .world-of-possibilities {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        color: #fff;
+        background-color: black;
+        border-top: 5px solid #ccc;
+        border-bottom: 5px solid #ccc;
+    }
+
+    .text-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.bgimg {
+    background-image: url(images/ACHealthLandingImage.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: helvetica-w01-bold,
+        helvetica-w02-bold,
+        helvetica-lt-w10-bold,
+        sans-serif;
+    ;
+    font-weight: 700;
+    color: #fafafa;
+    font-size: 25px;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+form {
+    width: 100%;
+    position: relative;
+}
+
+input[type=text],
+search {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* start of button style */
+.button {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #3D5495;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* end of button style */
+
+.world-of-possibilities {
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+    height: 430px;
+    justify-content: space-around;
+    padding: 10px;
+    padding-top: 40px;
+    color: #fff;
+    background-color: black;
+    border-top: 5px solid #ccc;
+    border-bottom: 5px solid #ccc;
+}
+
+video {
+    /* override other styles to make responsive */
+    width: 100%;
+    height: auto;
+    animation: 1s ease-out 1s 1 slideInFromRight;
+
+    padding: 30px;
+}
+
+.text-content {
+    width: 30%;
+    height: auto;
+    padding: 3rem;
+}
+
+.video-content {
+    width: 40%;
+    height: auto;
+    padding-top: 30px;
+
+}
+
+
+
+.large-text {
+    width: 100%;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: left;
+
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+
+    padding: 30px;
+}
+
+.medium-text {
+    padding-top: 30px;
+    font-size: 25px;
+    text-align: left;
+
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+
+    padding: 30px;
+}
+
+/* div text transform transition */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* image transform */
+@keyframes slideInFromLRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
